@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #786450;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper span {
+  display: block;
+}
+
+.wrapper .container {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(200deg, #ecbb6a, #cc8050);
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container .profile {
+  width: 310px;
+  height: 310px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+}
+
+.wrapper .container .profile section {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container .profile section div {
+  text-align: center;
+}
+
+.wrapper .container .profile section div:first-child {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container .profile section div:nth-child(2) {
+  position: relative;
+  bottom: 1rem;
+}
+
+.wrapper .container .profile section div:nth-child(2) span:first-child {
+  font-weight: 650;
+}
+
+.wrapper .container .profile section div:nth-child(2) span:last-child {
+  font-size: 13px;
+}
+
+.wrapper .container .profile section div:last-child span {
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 10px;
+  padding: 3px 1.3rem;
+  background: #fff;
+  border: 1px solid #786450;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.wrapper .container .profile section div:last-child span:hover {
+  cursor: pointer;
+  background: #786450;
+  color: #fff;
+}
+
+.wrapper .container .profile section div #out-cir, .wrapper .container .profile section div #in-cir, .wrapper .container .profile section div img {
+  border-radius: 50%;
+}
+
+.wrapper .container .profile section div #out-cir:hover, .wrapper .container .profile section div #in-cir:hover {
+  cursor: pointer;
+}
+
+.wrapper .container .profile section div #out-cir {
+  width: 100px;
+  height: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #786450 #786450 #786450 transparent;
+}
+
+.wrapper .container .profile section div #out-cir:hover {
+  border: 2px solid #786450;
+  border-left: 2px transparent;
+}
+
+.wrapper .container .profile section div #in-cir {
+  width: 90px;
+  height: 90px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #786450 transparent #786450 #786450;
+}
+
+.wrapper .container .profile section div #in-cir:hover {
+  border: 2px solid #786450;
+  border-right: 2px transparent;
+}
+
+.wrapper .container .profile section div img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.wrapper .container .profile aside {
+  width: 45%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.wrapper .container .profile aside div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #F5E8DF;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.wrapper .container .profile aside div:hover {
+  background-color: #E1CFC2;
+}
+
+.wrapper .container .profile aside div span:first-child {
+  font-size: 1.4rem;
+  font-weight: 550;
+}
+/*# sourceMappingURL=style.css.map */

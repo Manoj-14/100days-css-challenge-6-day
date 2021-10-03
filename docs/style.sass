@@ -1,0 +1,117 @@
+$bgdark: #cc8050
+$bglight: #ecbb6a
+$containerBg: #fff
+$brown: #786450
+$asidebg: #F5E8DF
+$asidehov: #E1CFC2
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    color: $brown
+.wrapper
+    @include center
+    height: 100vh
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    span
+        display: block
+    .container
+        width: 400px
+        height: 400px
+        background: linear-gradient(200deg, $bglight, $bgdark)
+        box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5)
+        border-radius: 10px
+        @include center
+        .profile
+            width: 310px
+            height: 310px
+            background: $containerBg
+            display: flex
+            border-radius: 10px
+            section
+                width: 55%
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                div
+                    text-align: center
+                    &:first-child
+                        transition: all 1s ease-in-out
+                        @include center
+                    &:nth-child(2)
+                        position: relative
+                        bottom: 1rem
+                        span
+                            &:first-child
+                                font-weight: 650
+                            &:last-child
+                                font-size: 13px
+                    &:last-child
+                        span
+                            border-radius: 20px
+                            font-weight: 600
+                            font-size: 1.1rem
+                            margin: 10px
+                            padding: 3px 1.3rem
+                            background: $containerBg
+                            border: 1px solid $brown
+                            transition: all 0.2s linear
+                            &:hover
+                                cursor: pointer
+                                background: $brown
+                                color: $containerBg
+                    #out-cir,#in-cir,img
+                        border-radius: 50%
+                    #out-cir,#in-cir
+                        &:hover
+                            // transform: rotate(180deg)
+                            cursor: pointer
+                    #out-cir
+                        width: 100px
+                        height: 100px
+                        border-width: 1px
+                        border-style: solid
+                        border-color: $brown $brown $brown transparent
+                        &:hover
+                            border: 2px solid $brown
+                            border-left: 2px transparent
+                    #in-cir
+                        width: 90px
+                        height: 90px
+                        border-width: 1px
+                        border-style: solid
+                        border-color: $brown transparent $brown $brown
+
+                        &:hover
+                            border: 2px solid $brown
+                            border-right: 2px transparent
+                    img
+                        width: 80px
+                        height: 80px
+                        position: absolute
+
+            aside
+                width: 45%
+                display: grid
+                place-items: center
+                gap: 2px
+                text-align: center
+                div
+                    @include center
+                    flex-direction: column
+                    width: 100%
+                    height: 100%
+                    background-color: $asidebg
+                    cursor: pointer
+                    transition: all 0.4s ease-in-out
+                    &:hover
+                        background-color: $asidehov
+                    span
+                        &:first-child
+                            font-size: 1.4rem
+                            font-weight: 550
