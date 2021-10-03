@@ -41,8 +41,34 @@ $asidehov: #E1CFC2
                 div
                     text-align: center
                     &:first-child
-                        transition: all 1s ease-in-out
                         @include center
+                        #out-cir,#in-cir,img
+                            border-radius: 50%
+                        #out-cir,#in-cir
+                            transition: all 1s ease-in-out
+                            border: 1px solid
+                            &:hover
+                                cursor: pointer
+                        #out-cir
+                            position: absolute
+                            width: 100px
+                            height: 100px
+                            border-color: $brown $brown $brown transparent
+                        #in-cir
+                            position: relative
+                            bottom: 0
+                            width: 90px
+                            height: 90px
+                            border-color: $brown transparent $brown $brown
+                        img
+                            width: 80px
+                            height: 80px
+                            position: absolute
+                    &:hover
+                        #out-cir
+                            transform: rotate(360deg)
+                        #in-cir
+                            transform: rotate(-360deg)
                     &:nth-child(2)
                         position: relative
                         bottom: 1rem
@@ -65,35 +91,6 @@ $asidehov: #E1CFC2
                                 cursor: pointer
                                 background: $brown
                                 color: $containerBg
-                    #out-cir,#in-cir,img
-                        border-radius: 50%
-                    #out-cir,#in-cir
-                        &:hover
-                            // transform: rotate(180deg)
-                            cursor: pointer
-                    #out-cir
-                        width: 100px
-                        height: 100px
-                        border-width: 1px
-                        border-style: solid
-                        border-color: $brown $brown $brown transparent
-                        &:hover
-                            border: 2px solid $brown
-                            border-left: 2px transparent
-                    #in-cir
-                        width: 90px
-                        height: 90px
-                        border-width: 1px
-                        border-style: solid
-                        border-color: $brown transparent $brown $brown
-
-                        &:hover
-                            border: 2px solid $brown
-                            border-right: 2px transparent
-                    img
-                        width: 80px
-                        height: 80px
-                        position: absolute
 
             aside
                 width: 45%

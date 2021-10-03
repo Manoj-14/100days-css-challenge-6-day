@@ -73,8 +73,6 @@
 }
 
 .wrapper .container .profile section div:first-child {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,6 +82,51 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wrapper .container .profile section div:first-child #out-cir, .wrapper .container .profile section div:first-child #in-cir, .wrapper .container .profile section div:first-child img {
+  border-radius: 50%;
+}
+
+.wrapper .container .profile section div:first-child #out-cir, .wrapper .container .profile section div:first-child #in-cir {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  border: 1px solid;
+}
+
+.wrapper .container .profile section div:first-child #out-cir:hover, .wrapper .container .profile section div:first-child #in-cir:hover {
+  cursor: pointer;
+}
+
+.wrapper .container .profile section div:first-child #out-cir {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-color: #786450 #786450 #786450 transparent;
+}
+
+.wrapper .container .profile section div:first-child #in-cir {
+  position: relative;
+  bottom: 0;
+  width: 90px;
+  height: 90px;
+  border-color: #786450 transparent #786450 #786450;
+}
+
+.wrapper .container .profile section div:first-child img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.wrapper .container .profile section div:hover #out-cir {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.wrapper .container .profile section div:hover #in-cir {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
 }
 
 .wrapper .container .profile section div:nth-child(2) {
@@ -115,46 +158,6 @@
   cursor: pointer;
   background: #786450;
   color: #fff;
-}
-
-.wrapper .container .profile section div #out-cir, .wrapper .container .profile section div #in-cir, .wrapper .container .profile section div img {
-  border-radius: 50%;
-}
-
-.wrapper .container .profile section div #out-cir:hover, .wrapper .container .profile section div #in-cir:hover {
-  cursor: pointer;
-}
-
-.wrapper .container .profile section div #out-cir {
-  width: 100px;
-  height: 100px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #786450 #786450 #786450 transparent;
-}
-
-.wrapper .container .profile section div #out-cir:hover {
-  border: 2px solid #786450;
-  border-left: 2px transparent;
-}
-
-.wrapper .container .profile section div #in-cir {
-  width: 90px;
-  height: 90px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #786450 transparent #786450 #786450;
-}
-
-.wrapper .container .profile section div #in-cir:hover {
-  border: 2px solid #786450;
-  border-right: 2px transparent;
-}
-
-.wrapper .container .profile section div img {
-  width: 80px;
-  height: 80px;
-  position: absolute;
 }
 
 .wrapper .container .profile aside {
